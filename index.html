@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,27 @@
       border-radius: 20px;
       padding: 2rem;
       box-shadow: 0 0 20px #000;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .lang-switch button {
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    .lang-switch button:hover {
+      background: #00ffcc;
+      color: #000;
+      transform: scale(1.05);
     }
     h1, h2, h3 {
       color: #00ffcc;
@@ -60,76 +81,160 @@
       color: #ccc;
     }
   </style>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll('.lang-' + lang).forEach(el => {
+        el.style.display = 'block';
+      });
+    }
+    window.onload = () => setLanguage('en');
+  </script>
 </head>
 <body>
+  <div class="lang-switch">
+    <button onclick="setLanguage('en')">🇬🇧 English</button>
+    <button onclick="setLanguage('id')">🇮🇩 Indonesia</button>
+  </div>
   <div class="container">
-    <h1>🐸 RENGGONK WHITEPAPER</h1>
-    <h2>"Semakin Gak Masuk Akal, Semakin Cuan"</h2>
-    
-    <p>Halo, saya <strong>GONK</strong>, dev dari token meme <strong>RENGGONK</strong>. Token ini dibentuk untuk menciptakan komunitas yang <span class="highlight">solid, positif, dan bebas stres</span> di dunia crypto. Mari bareng-bareng belajar, berbagi ilmu, dan cuan bareng lewat meme!</p>
+    <div class="lang lang-en">
+      <h1>🐸 RENGGONK WHITEPAPER</h1>
+      <h2>"The More Absurd, The More Profitable"</h2>
+      
+      <p>Hello, I'm <strong>GONK</strong>, the dev behind the meme token <strong>RENGGONK</strong>. This token was created to build a <span class="highlight">solid, positive, and stress-free</span> community in the crypto world. Let's learn together, share knowledge, and laugh our way to gains through memes!</p>
 
-    <h3>🔮 Filosofi RENGGONK</h3>
-    <p>RENGGONK adalah <em>gerakan absurd</em> penuh tawa. Kami percaya kekuatan meme bisa jadi alat edukasi, protes sosial, bahkan terapi batin untuk para trader yang tersesat.</p>
+      <h3>🔮 RENGGONK Philosophy</h3>
+      <p>RENGGONK is an <em>absurd movement</em> full of laughter. We believe that the power of memes can be used for education, social protest, and even therapy for lost traders.</p>
 
-    <h3>📊 Distribusi Token</h3>
-    <p><strong>Total Supply:</strong> 420,690,000,000 $RENG</p>
-    <table>
-      <tr>
-        <th>Alokasi</th>
-        <th>Jumlah Token</th>
-        <th>Persentase</th>
-        <th>Tujuan</th>
-      </tr>
-      <tr>
-        <td>Liquidity Pool (DEX)</td>
-        <td>252,414,000,000</td>
-        <td>60%</td>
-        <td>Perdagangan di DEX</td>
-      </tr>
-      <tr>
-        <td>Airdrop & Promosi</td>
-        <td>84,138,000,000</td>
-        <td>20%</td>
-        <td>Reward komunitas & event</td>
-      </tr>
-      <tr>
-        <td>Tim & Dev (Lock)</td>
-        <td>42,069,000,000</td>
-        <td>10%</td>
-        <td>Penghargaan & anti rug-pull</td>
-      </tr>
-      <tr>
-        <td>Cadangan Proyek (Lock)</td>
-        <td>42,069,000,000</td>
-        <td>10%</td>
-        <td>Dana darurat & stabilitas</td>
-      </tr>
-    </table>
+      <h3>📊 Token Distribution</h3>
+      <p><strong>Total Supply:</strong> 420,690,000,000 $RENG</p>
+      <table>
+        <tr>
+          <th>Allocation</th>
+          <th>Token Amount</th>
+          <th>Percentage</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Liquidity Pool (DEX)</td>
+          <td>252,414,000,000</td>
+          <td>60%</td>
+          <td>DEX trading</td>
+        </tr>
+        <tr>
+          <td>Airdrop & Promotion</td>
+          <td>84,138,000,000</td>
+          <td>20%</td>
+          <td>Community rewards & events</td>
+        </tr>
+        <tr>
+          <td>Team & Dev (Locked)</td>
+          <td>42,069,000,000</td>
+          <td>10%</td>
+          <td>Team reward & anti rug-pull</td>
+        </tr>
+        <tr>
+          <td>Project Reserve (Locked)</td>
+          <td>42,069,000,000</td>
+          <td>10%</td>
+          <td>Emergency fund & long-term stability</td>
+        </tr>
+      </table>
 
-    <h3>🔥 Burn Token</h3>
-    <p>Token akan dibakar manual oleh tim dan diumumkan publik. Ini untuk mengurangi supply, jaga harga tetap stabil, dan membuktikan kami bukan tukang cetak token sembarangan.</p>
+      <h3>🔥 Token Burn</h3>
+      <p>Tokens will be manually burned by the team and publicly announced. This reduces supply, helps stabilize the price, and proves we’re not printing tokens out of thin air.</p>
 
-    <h3>🎯 Tujuan & Misi Komunitas</h3>
-    <ul>
-      <li>Belajar crypto bareng komunitas</li>
-      <li>Berbagi pengalaman tanpa melihat status/gender</li>
-      <li>Cerita nyata, lucu, atau random</li>
-      <li>Protes sosial kreatif lewat meme</li>
-      <li>Bantu sesama dengan cara gokil & aktif</li>
-      <li>Diskusi solusi dari masalah nyata</li>
-      <li>Bangun solidaritas melalui humor</li>
-    </ul>
+      <h3>🎯 Community Goals & Mission</h3>
+      <ul>
+        <li>Learn crypto together in the community</li>
+        <li>Share experiences regardless of status/gender</li>
+        <li>Share true, funny, or random stories</li>
+        <li>Creative social protest through memes</li>
+        <li>Help others in fun and active ways</li>
+        <li>Discuss and solve real-world problems</li>
+        <li>Build solidarity through humor</li>
+      </ul>
 
-    <h3>🌍 Visi</h3>
-    <p>Menjadi <strong>meme coin paling dicintai</strong> di dunia crypto yang:</p>
-    <ul>
-      <li>Bebas berekspresi</li>
-      <li>Penuh makna dan tawa</li>
-      <li>Stabil dan berkembang bersama komunitas</li>
-    </ul>
+      <h3>🌍 Vision</h3>
+      <p>To become the <strong>most beloved meme coin</strong> in the crypto world that:</p>
+      <ul>
+        <li>Encourages free expression</li>
+        <li>Spreads meaning and laughter</li>
+        <li>Stays stable and grows with the community</li>
+      </ul>
+    </div>
+
+    <div class="lang lang-id">
+      <h1>🐸 WHITEPAPER RENGGONK</h1>
+      <h2>"Semakin Gak Masuk Akal, Semakin Cuan"</h2>
+      
+      <p>Halo, saya <strong>GONK</strong>, developer dari token meme <strong>RENGGONK</strong>. Token ini dibuat untuk membentuk komunitas yang <span class="highlight">solid, positif, dan bebas stres</span> di dunia crypto. Yuk belajar bareng, saling berbagi, dan cuan lewat meme!</p>
+
+      <h3>🔮 Filosofi RENGGONK</h3>
+      <p>RENGGONK adalah <em>gerakan absurd</em> penuh tawa. Kami percaya kekuatan meme bisa digunakan untuk edukasi, protes sosial, bahkan terapi untuk para trader yang nyangkut.</p>
+
+      <h3>📊 Distribusi Token</h3>
+      <p><strong>Total Supply:</strong> 420.690.000.000 $RENG</p>
+      <table>
+        <tr>
+          <th>Alokasi</th>
+          <th>Jumlah Token</th>
+          <th>Persentase</th>
+          <th>Tujuan</th>
+        </tr>
+        <tr>
+          <td>Liquidity Pool (DEX)</td>
+          <td>252.414.000.000</td>
+          <td>60%</td>
+          <td>Perdagangan di DEX</td>
+        </tr>
+        <tr>
+          <td>Airdrop & Promosi</td>
+          <td>84.138.000.000</td>
+          <td>20%</td>
+          <td>Reward komunitas & event</td>
+        </tr>
+        <tr>
+          <td>Tim & Dev (Terkunci)</td>
+          <td>42.069.000.000</td>
+          <td>10%</td>
+          <td>Penghargaan tim & anti rug-pull</td>
+        </tr>
+        <tr>
+          <td>Cadangan Proyek (Terkunci)</td>
+          <td>42.069.000.000</td>
+          <td>10%</td>
+          <td>Dana darurat & stabilitas jangka panjang</td>
+        </tr>
+      </table>
+
+      <h3>🔥 Pembakaran Token</h3>
+      <p>Token akan dibakar manual oleh tim dan diumumkan secara publik. Ini untuk mengurangi supply, menjaga stabilitas harga, dan bukti bahwa kami bukan dev pencetak token sembarangan.</p>
+
+      <h3>🎯 Tujuan & Misi Komunitas</h3>
+      <ul>
+        <li>Belajar crypto bareng komunitas</li>
+        <li>Berbagi pengalaman tanpa melihat status/gender</li>
+        <li>Cerita nyata, lucu, atau random</li>
+        <li>Protes sosial kreatif lewat meme</li>
+        <li>Bantu sesama dengan cara gokil & aktif</li>
+        <li>Diskusi solusi dari masalah nyata</li>
+        <li>Bangun solidaritas melalui humor</li>
+      </ul>
+
+      <h3>🌍 Visi</h3>
+      <p>Menjadi <strong>meme coin paling dicintai</strong> di dunia crypto yang:</p>
+      <ul>
+        <li>Mendukung ekspresi bebas</li>
+        <li>Penuh makna dan tawa</li>
+        <li>Stabil dan tumbuh bersama komunitas</li>
+      </ul>
+    </div>
 
     <footer>
-      &copy; 2025 RENGGONK Community | Meme Bukan Sekadar Lucu, Tapi Revolusi!
+      &copy; 2025 Komunitas RENGGONK | Meme Bukan Sekadar Lucu – Tapi Revolusi!
     </footer>
   </div>
 </body>
