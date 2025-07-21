@@ -1,57 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RENGGONK WHITEPAPER</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #00ffcc, #6600cc);
+      background: linear-gradient(270deg, #00ffcc, #6600cc, #ff00ff);
+      background-size: 600% 600%;
+      animation: gradientShift 10s ease infinite;
       color: #fff;
       padding: 2rem;
+      overflow-x: hidden;
     }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .container {
       max-width: 800px;
       margin: auto;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 0 20px #000;
+      box-shadow: 0 0 30px #000;
+      display: none;
     }
-    .lang-switch {
+
+    .question-container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
       text-align: center;
-      margin-bottom: 1rem;
+      box-shadow: 0 0 15px #000;
+      margin-bottom: 2rem;
     }
-    .lang-switch button {
-      background: #fff;
-      color: #000;
+
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
       border: none;
-      border-radius: 30px;
-      padding: 0.5rem 1.5rem;
-      margin: 0 0.5rem;
+      border-radius: 10px;
       font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
-    .lang-switch button:hover {
+    input {
+      width: 60%;
+    }
+    button {
       background: #00ffcc;
       color: #000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
       transform: scale(1.05);
     }
+
     h1, h2, h3 {
       color: #00ffcc;
-      text-align: center;
       text-shadow: 2px 2px #000;
     }
-    p, li {
-      line-height: 1.7;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
+
     .highlight {
       background: #fff;
       color: #000;
@@ -59,6 +79,7 @@
       border-radius: 5px;
       display: inline-block;
     }
+
     table {
       width: 100%;
       background: rgba(255, 255, 255, 0.2);
@@ -74,89 +95,68 @@
       background-color: #00ffcc;
       color: #000;
     }
+
     footer {
       text-align: center;
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #ccc;
     }
-  </style>
-  <script>
-    function setLanguage(lang) {
-      document.querySelectorAll('.lang').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll('.lang-' + lang).forEach(el => {
-        el.style.display = 'block';
-      });
+
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 1rem;
     }
-    window.onload = () => setLanguage('en');
-  </script>
+    .lang-switch button {
+      background: #fff;
+      color: #000;
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="lang-switch">
+  <!-- QUESTION LAYER -->
+  <div class="question-container" id="quiz">
+    <h1>🐸 Unlock the RENGGONK Wisdom</h1>
+    <p id="question">Loading question...</p>
+    <input type="text" id="answer" placeholder="Tulis jawaban kamu..."><br>
+    <button onclick="checkAnswer()">Submit Jawaban</button>
+    <p id="result"></p>
+  </div>
+
+  <!-- WHITEPAPER CONTENT -->
+  <div class="lang-switch" style="display: none;">
     <button onclick="setLanguage('en')">🇬🇧 English</button>
     <button onclick="setLanguage('id')">🇮🇩 Indonesia</button>
   </div>
-  <div class="container">
+
+  <div class="container" id="whitepaper">
+    <!-- ENGLISH -->
     <div class="lang lang-en">
       <h1>🐸 RENGGONK WHITEPAPER</h1>
       <h2>"The More Absurd, The More Profitable"</h2>
-      
       <p>Hello, I'm <strong>GONK</strong>, the dev behind the meme token <strong>RENGGONK</strong>. This token was created to build a <span class="highlight">solid, positive, and stress-free</span> community in the crypto world. Let's learn together, share knowledge, and laugh our way to gains through memes!</p>
-
       <h3>🔮 RENGGONK Philosophy</h3>
       <p>RENGGONK is an <em>absurd movement</em> full of laughter. We believe that the power of memes can be used for education, social protest, and even therapy for lost traders.</p>
-
       <h3>📊 Token Distribution</h3>
       <p><strong>Total Supply:</strong> 420,690,000,000 $RENG</p>
       <table>
-        <tr>
-          <th>Allocation</th>
-          <th>Token Amount</th>
-          <th>Percentage</th>
-          <th>Purpose</th>
-        </tr>
-        <tr>
-          <td>Liquidity Pool (DEX)</td>
-          <td>252,414,000,000</td>
-          <td>60%</td>
-          <td>DEX trading</td>
-        </tr>
-        <tr>
-          <td>Airdrop & Promotion</td>
-          <td>84,138,000,000</td>
-          <td>20%</td>
-          <td>Community rewards & events</td>
-        </tr>
-        <tr>
-          <td>Team & Dev (Locked)</td>
-          <td>42,069,000,000</td>
-          <td>10%</td>
-          <td>Team reward & anti rug-pull</td>
-        </tr>
-        <tr>
-          <td>Project Reserve (Locked)</td>
-          <td>42,069,000,000</td>
-          <td>10%</td>
-          <td>Emergency fund & long-term stability</td>
-        </tr>
+        <tr><th>Allocation</th><th>Token Amount</th><th>Percentage</th><th>Purpose</tr>
+        <tr><td>Liquidity Pool (DEX)</td><td>252,414,000,000</td><td>60%</td><td>DEX trading</td></tr>
+        <tr><td>Airdrop & Promotion</td><td>84,138,000,000</td><td>20%</td><td>Community rewards & events</td></tr>
+        <tr><td>Team & Dev (Locked)</td><td>42,069,000,000</td><td>10%</td><td>Team reward & anti rug-pull</td></tr>
+        <tr><td>Project Reserve (Locked)</td><td>42,069,000,000</td><td>10%</td><td>Emergency fund & long-term stability</td></tr>
       </table>
-
       <h3>🔥 Token Burn</h3>
       <p>Tokens will be manually burned by the team and publicly announced. This reduces supply, helps stabilize the price, and proves we’re not printing tokens out of thin air.</p>
-
       <h3>🎯 Community Goals & Mission</h3>
       <ul>
         <li>Learn crypto together in the community</li>
         <li>Share experiences regardless of status/gender</li>
-        <li>Share true, funny, or random stories</li>
         <li>Creative social protest through memes</li>
-        <li>Help others in fun and active ways</li>
-        <li>Discuss and solve real-world problems</li>
-        <li>Build solidarity through humor</li>
       </ul>
-
       <h3>🌍 Vision</h3>
       <p>To become the <strong>most beloved meme coin</strong> in the crypto world that:</p>
       <ul>
@@ -166,64 +166,30 @@
       </ul>
     </div>
 
+    <!-- INDONESIA -->
     <div class="lang lang-id">
       <h1>🐸 WHITEPAPER RENGGONK</h1>
       <h2>"Semakin Gak Masuk Akal, Semakin Cuan"</h2>
-      
       <p>Halo, saya <strong>GONK</strong>, developer dari token meme <strong>RENGGONK</strong>. Token ini dibuat untuk membentuk komunitas yang <span class="highlight">solid, positif, dan bebas stres</span> di dunia crypto. Yuk belajar bareng, saling berbagi, dan cuan lewat meme!</p>
-
       <h3>🔮 Filosofi RENGGONK</h3>
       <p>RENGGONK adalah <em>gerakan absurd</em> penuh tawa. Kami percaya kekuatan meme bisa digunakan untuk edukasi, protes sosial, bahkan terapi untuk para trader yang nyangkut.</p>
-
       <h3>📊 Distribusi Token</h3>
       <p><strong>Total Supply:</strong> 420.690.000.000 $RENG</p>
       <table>
-        <tr>
-          <th>Alokasi</th>
-          <th>Jumlah Token</th>
-          <th>Persentase</th>
-          <th>Tujuan</th>
-        </tr>
-        <tr>
-          <td>Liquidity Pool (DEX)</td>
-          <td>252.414.000.000</td>
-          <td>60%</td>
-          <td>Perdagangan di DEX</td>
-        </tr>
-        <tr>
-          <td>Airdrop & Promosi</td>
-          <td>84.138.000.000</td>
-          <td>20%</td>
-          <td>Reward komunitas & event</td>
-        </tr>
-        <tr>
-          <td>Tim & Dev (Terkunci)</td>
-          <td>42.069.000.000</td>
-          <td>10%</td>
-          <td>Penghargaan tim & anti rug-pull</td>
-        </tr>
-        <tr>
-          <td>Cadangan Proyek (Terkunci)</td>
-          <td>42.069.000.000</td>
-          <td>10%</td>
-          <td>Dana darurat & stabilitas jangka panjang</td>
-        </tr>
+        <tr><th>Alokasi</th><th>Jumlah Token</th><th>Persentase</th><th>Tujuan</th></tr>
+        <tr><td>Liquidity Pool (DEX)</td><td>252.414.000.000</td><td>60%</td><td>Perdagangan di DEX</td></tr>
+        <tr><td>Airdrop & Promosi</td><td>84.138.000.000</td><td>20%</td><td>Reward komunitas & event</td></tr>
+        <tr><td>Tim & Dev (Terkunci)</td><td>42.069.000.000</td><td>10%</td><td>Penghargaan tim & anti rug-pull</td></tr>
+        <tr><td>Cadangan Proyek (Terkunci)</td><td>42.069.000.000</td><td>10%</td><td>Dana darurat & stabilitas jangka panjang</td></tr>
       </table>
-
       <h3>🔥 Pembakaran Token</h3>
       <p>Token akan dibakar manual oleh tim dan diumumkan secara publik. Ini untuk mengurangi supply, menjaga stabilitas harga, dan bukti bahwa kami bukan dev pencetak token sembarangan.</p>
-
       <h3>🎯 Tujuan & Misi Komunitas</h3>
       <ul>
         <li>Belajar crypto bareng komunitas</li>
         <li>Berbagi pengalaman tanpa melihat status/gender</li>
-        <li>Cerita nyata, lucu, atau random</li>
         <li>Protes sosial kreatif lewat meme</li>
-        <li>Bantu sesama dengan cara gokil & aktif</li>
-        <li>Diskusi solusi dari masalah nyata</li>
-        <li>Bangun solidaritas melalui humor</li>
       </ul>
-
       <h3>🌍 Visi</h3>
       <p>Menjadi <strong>meme coin paling dicintai</strong> di dunia crypto yang:</p>
       <ul>
@@ -237,5 +203,38 @@
       &copy; 2025 Komunitas RENGGONK | Meme Bukan Sekadar Lucu – Tapi Revolusi!
     </footer>
   </div>
+
+  <script>
+    const questions = [
+      { q: "Siapa pencipta Bitcoin?", a: "Satoshi Nakamoto" },
+      { q: "Jika 10.000 BTC ditukar untuk 2 pizza, berapa BTC per pizza?", a: "5000" },
+      { q: "Berapa total kaki 69 kodok?", a: "276" },
+      { q: "DEX adalah singkatan dari?", a: "Decentralized Exchange" },
+      { q: "Harga awal token 0.0001, naik 420%, jadi berapa?", a: "0.00052" },
+      { q: "Gas fee 0.003 x 420 transaksi = ?", a: "1.26" },
+      { q: "420.690.000.000 dibakar 69%, sisa berapa?", a: "130803900000" }
+    ];
+
+    const randomQ = questions[Math.floor(Math.random() * questions.length)];
+    document.getElementById("question").innerText = randomQ.q;
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+      if (userAnswer === randomQ.a.toLowerCase()) {
+        document.getElementById("quiz").style.display = "none";
+        document.querySelector(".lang-switch").style.display = "block";
+        document.getElementById("whitepaper").style.display = "block";
+      } else {
+        document.getElementById("result").innerText = "❌ Salah bro... coba pikirin lagi dengan logika kodok!";
+      }
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
+    }
+
+    window.onload = () => setLanguage('en');
+  </script>
 </body>
 </html>
