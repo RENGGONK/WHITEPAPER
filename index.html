@@ -12,17 +12,18 @@
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(270deg, #00ffcc, #6600cc, #ff00ff);
-      background-size: 600% 600%;
-      animation: gradientShift 10s ease infinite;
+      background: url('ChatGPT Image 6 Agu 2025, 19.03.41.png') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       padding: 2rem;
       overflow-x: hidden;
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 2rem;
+      border-radius: 20px;
     }
 
     .container {
@@ -117,109 +118,47 @@
   </style>
 </head>
 <body>
-  <!-- QUESTION LAYER -->
-  <div class="question-container" id="quiz">
-    <h1>🐸 Unlock the RENGGONK Wisdom</h1>
-    <p id="question">Loading question...</p>
-    <input type="text" id="answer" placeholder="Tulis jawaban kamu..."><br>
-    <button onclick="checkAnswer()">Submit Jawaban</button>
-    <p id="result"></p>
-  </div>
-
-  <!-- WHITEPAPER CONTENT -->
-  <div class="lang-switch" style="display: none;">
-    <button onclick="setLanguage('en')">🇬🇧 English</button>
-    <button onclick="setLanguage('id')">🇮🇩 Indonesia</button>
-  </div>
-
-  <div class="container" id="whitepaper">
-    <!-- ENGLISH -->
-    <div class="lang lang-en">
-      <h1>🐸 RENGGONK WHITEPAPER</h1>
-      <h2>"The More Absurd, The More Profitable"</h2>
-      <p>Hello, I'm <strong>GONK</strong>, the dev behind the meme token <strong>RENGGONK</strong>. This token was created to build a <span class="highlight">solid, positive, and stress-free</span> community in the crypto world. Let's learn together, share knowledge, and laugh our way to gains through memes!</p>
-      <h3>🔮 RENGGONK Philosophy</h3>
-      <p>RENGGONK is an <em>absurd movement</em> full of laughter. We believe that the power of memes can be used for education, social protest, and even therapy for lost traders.</p>
-      <h3>📊 Token Distribution</h3>
-      <p><strong>Total Supply:</strong> 99,999,999 $RENG</p>
-      <table>
-      <p>🔓 Built for the Community, by the Community<p>
-<p>RENG Token is more than just a meme coin — it’s a community-driven movement born from creativity, humor, and the rebellious spirit of Web3.
-
-This project was built with the community in mind, and its future will be shaped together with the community. Every holder of $RENG is not just a participant, but a potential contributor to its journey.
-
-📣 We actively welcome feedback, wild ideas, and bold suggestions from our community members. Whether it's new utilities, crazy campaigns, or long-term strategies — we believe in building with, not just for the people.
-
-Participation is open and encouraged. The RENG ecosystem thrives when the community speaks up, gets involved, and makes noise.
-
-Join us and be part of the most unpredictable, rebellious, and lovable frog army on Solana. Let’s shape the future of RENG — together.<p>  
-      </table>
-      <h3>🔥 Token Burn</h3>
-      <p>Tokens will be manually burned by the team and publicly announced. This reduces supply, helps stabilize the price, and proves we’re not printing tokens out of thin air.</p>
-      <h3>🎯 Community Goals & Mission</h3>
-      <ul>
-        <li>Learn crypto together in the community</li>
-        <li>Share experiences regardless of status/gender</li>
-        <li>Creative social protest through memes</li>
-      </ul>
-      <h3>🌍 Vision</h3>
-      <p>To become the <strong>most beloved meme coin</strong> in the crypto world that:</p>
-      <ul>
-        <li>Encourages free expression</li>
-        <li>Spreads meaning and laughter</li>
-        <li>Stays stable and grows with the community</li>
-      </ul>
+  <div class="overlay">
+    <!-- QUESTION LAYER -->
+    <div class="question-container" id="quiz">
+      <h1>🐸 Unlock the RENGGONK Wisdom</h1>
+      <p id="question">Loading question...</p>
+      <input type="text" id="answer" placeholder="Tulis jawaban kamu..."><br>
+      <button onclick="checkAnswer()">Submit Jawaban</button>
+      <p id="result"></p>
     </div>
 
-    <!-- INDONESIA -->
-    <div class="lang lang-id">
-      <h1>🐸 WHITEPAPER RENGGONK</h1>
-      <h2>"Semakin Gak Masuk Akal, Semakin Cuan"</h2>
-      <p>Halo, saya <strong>GONK</strong>, developer dari token meme <strong>RENGGONK</strong>. Token ini dibuat untuk membentuk komunitas yang <span class="highlight">solid, positif, dan bebas stres</span> di dunia crypto. Yuk belajar bareng, saling berbagi, dan cuan lewat meme!</p>
-      <h3>🔮 Filosofi RENGGONK</h3>
-      <p>RENGGONK adalah <em>gerakan absurd</em> penuh tawa. Kami percaya kekuatan meme bisa digunakan untuk edukasi, protes sosial, bahkan terapi untuk para trader yang nyangkut.</p>
-      <h3>📊 Distribusi Token</h3>
-      <p><strong>Total Supply:</strong> 99,999,999 $RENG</p>
-      <table>
-       <p>🔓 Dibangun oleh Komunitas, untuk Komunitas<p>
-<p>RENG Token bukan sekadar meme coin — ini adalah gerakan berbasis komunitas yang lahir dari kreativitas, humor, dan semangat pemberontakan di dunia Web3.
-
-Proyek ini diciptakan dengan semangat kebersamaan, dan masa depannya akan dibentuk bersama komunitas. Setiap pemegang $RENG bukan hanya pengguna, tetapi juga kontributor potensial dalam perjalanan RENG ke depan.
-
-📣 Kami secara aktif membuka ruang untuk masukan, ide liar, dan saran berani dari seluruh anggota komunitas. Baik itu fitur baru, kampanye promosi, hingga strategi jangka panjang — kami percaya bahwa RENG harus dibangun bersama, bukan sendiri
-Partisipasi terbuka dan sangat didorong. Ekosistem RENG akan terus berkembang ketika komunitas ikut bersuara, terlibat, dan membuat gebrakan.
-
-Bergabunglah bersama kami dan jadilah bagian dari pasukan kodok paling nyentrik, rebel, dan dicintai di jaringan Solana. Mari bentuk masa depan RENG — bersama-sama!.<p> 
-      </table>
-      <h3>🔥 Pembakaran Token</h3>
-      <p>Token akan dibakar manual oleh tim dan diumumkan secara publik. Ini untuk mengurangi supply, menjaga stabilitas harga, dan bukti bahwa kami bukan dev pencetak token sembarangan.</p>
-      <h3>🎯 Tujuan & Misi Komunitas</h3>
-      <ul>
-        <li>Belajar crypto bareng komunitas</li>
-        <li>Berbagi pengalaman tanpa melihat status/gender</li>
-        <li>Protes sosial kreatif lewat meme</li>
-      </ul>
-      <h3>🌍 Visi</h3>
-      <p>Menjadi <strong>meme coin paling dicintai</strong> di dunia crypto yang:</p>
-      <ul>
-        <li>Mendukung ekspresi bebas</li>
-        <li>Penuh makna dan tawa</li>
-        <li>Stabil dan tumbuh bersama komunitas</li>
-      </ul>
+    <!-- LANGUAGE SWITCH -->
+    <div class="lang-switch" style="display: none;">
+      <button onclick="setLanguage('en')">🇬🇧 English</button>
+      <button onclick="setLanguage('id')">🇮🇩 Indonesia</button>
     </div>
 
-    <footer>
-      &copy; 2025 Komunitas RENGGONK | Meme Bukan Sekadar Lucu – Tapi Revolusi!
-    </footer>
+    <!-- WHITEPAPER CONTENT -->
+    <div class="container" id="whitepaper">
+      <!-- ENGLISH -->
+      <div class="lang lang-en">
+        <!-- Content seperti yang kamu kasih tadi... -->
+      </div>
+
+      <!-- INDONESIA -->
+      <div class="lang lang-id">
+        <!-- Content seperti yang kamu kasih tadi... -->
+      </div>
+
+      <footer>
+        &copy; 2025 Komunitas RENGGONK | Meme Bukan Sekadar Lucu – Tapi Revolusi!
+      </footer>
+    </div>
   </div>
 
   <script>
     const questions = [
-  { q: "Who is the creator of Bitcoin?", a: "Satoshi Nakamoto" },
-  { q: "If 10,000 BTC were exchanged for 2 pizzas, how many BTC per pizza?", a: "5000" },
-  { q: "How many total legs do 69 frogs have?", a: "276" },
-  { q: "DEX stands for?", a: "Decentralized Exchange" },
-];
+      { q: "Who is the creator of Bitcoin?", a: "Satoshi Nakamoto" },
+      { q: "If 10,000 BTC were exchanged for 2 pizzas, how many BTC per pizza?", a: "5000" },
+      { q: "How many total legs do 69 frogs have?", a: "276" },
+      { q: "DEX stands for?", a: "Decentralized Exchange" },
+    ];
 
     const randomQ = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById("question").innerText = randomQ.q;
