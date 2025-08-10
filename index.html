@@ -19,32 +19,23 @@
       overflow-x: hidden;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-      padding: 2rem;
-      border-radius: 20px;   
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 0 30px #000;
-      display: none;
-    }
-
+    /* ✅ Kotak pertanyaan transparan terang */
     .question-container {
       max-width: 600px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.3);
       padding: 2rem;
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 0 15px #000;
       margin-bottom: 2rem;
+      color: black; /* semua teks di sini hitam */
+    }
+
+    /* ✅ Pertanyaan hitam + shadow putih */
+    #question {
+      color: black;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
     }
 
     input, button {
@@ -66,6 +57,23 @@
     }
     button:hover {
       transform: scale(1.05);
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 2rem;
+      border-radius: 20px;   
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 30px #000;
+      display: none;
     }
 
     h1, h2, h3 {
@@ -122,7 +130,7 @@
   <div class="question-container" id="quiz">
     <h1>🐸 Unlock the RENGGONK Wisdom</h1>
     <p id="question">Loading question...</p>
-    <input type="text" id="answer" placeholder="you answer..."><br>
+    <input type="text" id="answer" placeholder="your answer..."><br>
     <button onclick="checkAnswer()">Submit</button>
     <p id="result"></p>
   </div>
@@ -143,18 +151,12 @@
       <p>RENGGONK is an <em>absurd movement</em> full of laughter. We believe that the power of memes can be used for education, social protest, and even therapy for lost traders.</p>
       <h3>📊 Token Distribution</h3>
       <p><strong>Total Supply:</strong> 99,999,999 $RENG</p>
-      <table>
-      <p>🔓 Built for the Community, by the Community<p>
-<p>RENG Token is more than just a meme coin — it’s a community-driven movement born from creativity, humor, and the rebellious spirit of Web3.
-
-This project was built with the community in mind, and its future will be shaped together with the community. Every holder of $RENG is not just a participant, but a potential contributor to its journey.
-
-📣 We actively welcome feedback, wild ideas, and bold suggestions from our community members. Whether it's new utilities, crazy campaigns, or long-term strategies — we believe in building with, not just for the people.
-
-Participation is open and encouraged. The RENG ecosystem thrives when the community speaks up, gets involved, and makes noise.
-
-Join us and be part of the most unpredictable, rebellious, and lovable frog army on Solana. Let’s shape the future of RENG — together.<p>  
-      </table>
+      <p>🔓 Built for the Community, by the Community</p>
+      <p>RENG Token is more than just a meme coin — it’s a community-driven movement born from creativity, humor, and the rebellious spirit of Web3.</p>
+      <p>This project was built with the community in mind, and its future will be shaped together with the community. Every holder of $RENG is not just a participant, but a potential contributor to its journey.</p>
+      <p>📣 We actively welcome feedback, wild ideas, and bold suggestions from our community members. Whether it's new utilities, crazy campaigns, or long-term strategies — we believe in building with, not just for the people.</p>
+      <p>Participation is open and encouraged. The RENG ecosystem thrives when the community speaks up, gets involved, and makes noise.</p>
+      <p>Join us and be part of the most unpredictable, rebellious, and lovable frog army on Solana. Let’s shape the future of RENG — together.</p>
       <h3>🔥 Token Burn</h3>
       <p>Tokens will be manually burned by the team and publicly announced. This reduces supply, helps stabilize the price, and proves we’re not printing tokens out of thin air.</p>
       <h3>🎯 Community Goals & Mission</h3>
@@ -181,17 +183,12 @@ Join us and be part of the most unpredictable, rebellious, and lovable frog army
       <p>RENGGONK adalah <em>gerakan absurd</em> penuh tawa. Kami percaya kekuatan meme bisa digunakan untuk edukasi, protes sosial, bahkan terapi untuk para trader yang nyangkut.</p>
       <h3>📊 Distribusi Token</h3>
       <p><strong>Total Supply:</strong> 99,999,999 $RENG</p>
-      <table>
-       <p>🔓 Dibangun oleh Komunitas, untuk Komunitas<p>
-<p>RENG Token bukan sekadar meme coin — ini adalah gerakan berbasis komunitas yang lahir dari kreativitas, humor, dan semangat pemberontakan di dunia Web3.
-
-Proyek ini diciptakan dengan semangat kebersamaan, dan masa depannya akan dibentuk bersama komunitas. Setiap pemegang $RENG bukan hanya pengguna, tetapi juga kontributor potensial dalam perjalanan RENG ke depan.
-
-📣 Kami secara aktif membuka ruang untuk masukan, ide liar, dan saran berani dari seluruh anggota komunitas. Baik itu fitur baru, kampanye promosi, hingga strategi jangka panjang — kami percaya bahwa RENG harus dibangun bersama, bukan sendiri
-Partisipasi terbuka dan sangat didorong. Ekosistem RENG akan terus berkembang ketika komunitas ikut bersuara, terlibat, dan membuat gebrakan.
-
-Bergabunglah bersama kami dan jadilah bagian dari pasukan kodok paling nyentrik, rebel, dan dicintai di jaringan Solana. Mari bentuk masa depan RENG — bersama-sama!.<p> 
-      </table>
+      <p>🔓 Dibangun oleh Komunitas, untuk Komunitas</p>
+      <p>RENG Token bukan sekadar meme coin — ini adalah gerakan berbasis komunitas yang lahir dari kreativitas, humor, dan semangat pemberontakan di dunia Web3.</p>
+      <p>Proyek ini diciptakan dengan semangat kebersamaan, dan masa depannya akan dibentuk bersama komunitas. Setiap pemegang $RENG bukan hanya pengguna, tetapi juga kontributor potensial dalam perjalanan RENG ke depan.</p>
+      <p>📣 Kami secara aktif membuka ruang untuk masukan, ide liar, dan saran berani dari seluruh anggota komunitas. Baik itu fitur baru, kampanye promosi, hingga strategi jangka panjang — kami percaya bahwa RENG harus dibangun bersama, bukan sendiri.</p>
+      <p>Partisipasi terbuka dan sangat didorong. Ekosistem RENG akan terus berkembang ketika komunitas ikut bersuara, terlibat, dan membuat gebrakan.</p>
+      <p>Bergabunglah bersama kami dan jadilah bagian dari pasukan kodok paling nyentrik, rebel, dan dicintai di jaringan Solana. Mari bentuk masa depan RENG — bersama-sama!</p>
       <h3>🔥 Pembakaran Token</h3>
       <p>Token akan dibakar manual oleh tim dan diumumkan secara publik. Ini untuk mengurangi supply, menjaga stabilitas harga, dan bukti bahwa kami bukan dev pencetak token sembarangan.</p>
       <h3>🎯 Tujuan & Misi Komunitas</h3>
@@ -216,10 +213,10 @@ Bergabunglah bersama kami dan jadilah bagian dari pasukan kodok paling nyentrik,
 
   <script>
     const questions = [
-  { q: "Who is the creator of Bitcoin?", a: "Satoshi Nakamoto" },
-  { q: "If 10,000 BTC were exchanged for 2 pizzas, how many BTC per pizza?", a: "5000" },
-  { q: "How many total legs do 69 frogs have?", a: "276" },
-];
+      { q: "Who is the creator of Bitcoin?", a: "Satoshi Nakamoto" },
+      { q: "If 10,000 BTC were exchanged for 2 pizzas, how many BTC per pizza?", a: "5000" },
+      { q: "How many total legs do 69 frogs have?", a: "276" },
+    ];
 
     const randomQ = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById("question").innerText = randomQ.q;
